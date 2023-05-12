@@ -11,7 +11,7 @@ export const authSlice = createSlice({
   },
   extraReducers: builder => {
     builder
-      .addCase(register.pending, (state, action) => state)
+      .addCase(register.pending, state => state)
       .addCase(register.fulfilled, (state, action) => {
         state.user = action.payload.user;
         state.token = action.payload.token;

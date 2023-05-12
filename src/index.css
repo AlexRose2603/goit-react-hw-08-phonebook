@@ -8,7 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+  background-image: url('./256111.jpg');
 
   background-size: cover;
   -webkit-animation: slidein 100s;
@@ -58,9 +58,4 @@ body {
   left: 0;
   background: rgba(75, 75, 250, 0.3);
   border-radius: 3px;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

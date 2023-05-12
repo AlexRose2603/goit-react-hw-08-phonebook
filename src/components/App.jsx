@@ -9,7 +9,7 @@ import { HomePage } from 'pages/home/Home';
 import { LoginPage } from 'pages/login/Login';
 import { RegisterPage } from 'pages/register/Register';
 import { Contacts } from 'pages/contacts/Contacts';
-
+import { Navigation, Original, UserLink } from './App.styled';
 export const App = () => {
   const dispatch = useDispatch();
 
@@ -19,11 +19,11 @@ export const App = () => {
 
   return (
     <>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/register">Registration</Link>
-        <Link to="/login">Login in</Link>
-      </nav>
+      <Navigation>
+        <Original to="/">Home</Original>
+        <UserLink to="/register">Registration</UserLink>
+        <UserLink to="/login">Login </UserLink>
+      </Navigation>
       <Routes>
         <Route path="/" element={<Layout />} />
         <Route index element={<HomePage />} />
