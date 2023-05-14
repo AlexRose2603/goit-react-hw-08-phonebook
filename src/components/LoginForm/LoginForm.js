@@ -5,7 +5,7 @@ export const LoginForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = event => {
-    event.PreventDefault();
+    event.preventDefault();
     const form = event.currentTarget;
     dispatch(
       logIn({

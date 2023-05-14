@@ -5,7 +5,7 @@ export const RegisterForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = event => {
-    event.PreventDefault();
+    event.preventDefault();
     const form = event.currentTarget;
     dispatch(
       register({
