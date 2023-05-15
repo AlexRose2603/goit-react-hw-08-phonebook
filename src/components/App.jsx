@@ -10,49 +10,61 @@ import { RegisterPage } from 'pages/register/Register';
 import { Contacts } from 'pages/contacts/Contacts';
 import { Navigation, Original, UserLink } from './App.styled';
 import { useAuth } from 'redux/auth/useAuth';
+import { AppBar } from './AppBar/AppBar';
+
 export const App = () => {
   const dispatch = useDispatch();
-  const { isRefreshing } = useAuth();
+  const { isRefreshing, isLoggedIn } = useAuth();
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
   return (
     <>
-      <Navigation>
-        <Original to="/">Home</Original>
-        <UserLink to="/register">Registration</UserLink>
-        <UserLink to="/login">Login </UserLink>
-      </Navigation>
-      {!isRefreshing && (
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route
-            path="/login"
-            element={
-              <RestrictedRoute
-                redirectTo="/contacts"
-                component={<LoginPage />}
+      <header>
+        {isLoggedIn ? (
+          <AppBar />
+        ) : (
+          <Navigation>
+            <Original to="/">Home</Original>
+            <UserLink to="/register">Registration</UserLink>
+            <UserLink to="/login">Login </UserLink>
+          </Navigation>
+        )}
+      </header>
+      <main>
+        <div>
+          {!isRefreshing && (
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route
+                path="/login"
+                element={
+                  <RestrictedRoute
+                    redirectTo="/contacts"
+                    component={<LoginPage />}
+                  />
+                }
               />
-            }
-          />
-          <Route
-            path="/register"
-            element={
-              <RestrictedRoute
-                redirectTo="/contacts"
-                component={<RegisterPage />}
+              <Route
+                path="/register"
+                element={
+                  <RestrictedRoute
+                    redirectTo="/contacts"
+                    component={<RegisterPage />}
+                  />
+                }
               />
-            }
-          />
-          <Route
-            path="/contacts"
-            element={
-              <PrivateRoute redirectTo="/login" component={<Contacts />} />
-            }
-          />
-        </Routes>
-      )}
+              <Route
+                path="/contacts"
+                element={
+                  <PrivateRoute redirectTo="/login" component={<Contacts />} />
+                }
+              />
+            </Routes>
+          )}
+        </div>
+      </main>
     </>
   );
 };

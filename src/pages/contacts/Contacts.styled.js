@@ -1,25 +1,36 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 export const Title = styled.h1`
-  text-align: center;
   letter-spacing: 1.3px;
+  font-size: 36px;
   color: white;
+  font-family: 'Dancing Script', cursive;
 `;
 
 export const Section = styled.h2`
-  text-align: center;
   color: white;
-  font-size: 30px;
+  font-size: 38px;
+  font-family: 'Dancing Script', cursive;
 `;
 
 export const Total = styled.div`
   border: 2px solid white;
+  font-family: 'Dancing Script', cursive;
   margin: 30px auto;
   padding: 15px 20px;
-  width: 250px;
-  font-size: 20px;
-  border-radius: 57px;
-  background: #74a871;
-  box-shadow: inset 20px 20px 54px #2e432d, inset -20px -20px 54px #baffb5;
+  width: 300px;
+  font-size: 28px;
+  text-align: center;
+  background: rgba(73, 164, 135, 0.43);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.4px);
+  -webkit-backdrop-filter: blur(4.4px);
+  border: 1px solid rgba(73, 164, 135, 0.3);
 `;

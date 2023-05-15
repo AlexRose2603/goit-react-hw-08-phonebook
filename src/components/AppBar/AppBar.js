@@ -1,4 +1,4 @@
-// import { Navigation } from '../Navigation/Navigation';
+import { Navigation } from '../Navigation/Navigation';
 import { UserMenu } from '../UserMenu/UserMenu';
 import { AuthNav } from '../AuthNav/AuthNav';
 import { useAuth } from 'redux/auth/useAuth';
@@ -8,7 +8,7 @@ export const AppBar = () => {
 
   return (
     <header>
-      {/* <Navigation /> */}
+      <Navigation />
       {isLoggedIn ? <UserMenu /> : <AuthNav />}
     </header>
   );

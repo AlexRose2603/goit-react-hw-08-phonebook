@@ -20,21 +20,25 @@ export const Number = styled.p`
   color: white;
 `;
 export const Contact = styled.li`
-  border: 2px solid white;
-  border-radius: 52px;
-  background: #27434f;
-  box-shadow: inset 20px 20px 54px #101b20, inset -20px -20px 54px #3e6b7e;
   display: flex;
   justify-content: space-between;
-  
+  background: rgba(73, 164, 135, 0.43);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.4px);
+  -webkit-backdrop-filter: blur(4.4px);
+  border: 1px solid rgba(73, 164, 135, 0.3);
 `;
 
 export const DeleteBtn = styled.button`
   border-width: 0;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background: rgba(136, 147, 195, 0.47);
+  cursor: pointer;
+  border: 1px solid white;
   &:hover,
   &:focus {
-    backgrount-color: #5b9f56;
+    background: #d4bfd1;
   }
 `;
