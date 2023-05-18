@@ -14,12 +14,12 @@ export const LoggedInNavigation = styled.nav`
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(230, 206, 234, 0.3);
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
 `;
 export const Original = styled(NavLink)`
   text-decoration: none;
   margin-right: auto;
-  font-family: 'Dancing Script', cursive;
-  font-size: 30px;
   color: white;
   &.active {
     color: #fa8072;
@@ -27,8 +27,6 @@ export const Original = styled(NavLink)`
 `;
 export const PrivateLink = styled(NavLink)`
   text-decoration: none;
-  font-family: 'Dancing Script', cursive;
-  font-size: 30px;
   color: white;
   &.active {
     color: #fa8072;

@@ -5,6 +5,9 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    padding: 0 15px;
+  }
 `;
 export const Title = styled.h1`
   letter-spacing: 1.3px;

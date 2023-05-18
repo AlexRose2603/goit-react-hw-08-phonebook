@@ -1,9 +1,9 @@
-import { Link, Section } from './AuthNav.styled';
+import { UserLink } from './AuthNav.styled';
 export const AuthNav = () => {
   return (
-    <Section>
-      <Link to="/register">Register</Link>
-      <Link to="/login">Log In</Link>
-    </Section>
+    <>
+      <UserLink to="/register">Registration</UserLink>
+      <UserLink to="/login">Log in</UserLink>
+    </>
   );
 };

@@ -7,6 +7,9 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    max-width: 750px;
+  }
 `;
 
 export const Greeting = styled.h2`
